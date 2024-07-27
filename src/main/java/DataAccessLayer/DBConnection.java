@@ -19,7 +19,7 @@ public class DBConnection {
     private static DBConnection instance;
     private Connection connection;
     
-    private static String serveUrl = "jdbc:mysql://127.0.0.1:3306/fwrp";
+    private static String serveUrl = "jdbc:mysql://127.0.0.1:3305/fwrp";
     private static String userString ="root";
     private static String passwordString = "root";
     private static String driveString = "com.mysql.cj.jdbc.Driver";
