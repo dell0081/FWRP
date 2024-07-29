@@ -1,5 +1,5 @@
 <%-- 
-    Author   
+    Author: Mohammad Dellawari   
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,7 +27,7 @@
                 <label for="price">Price in CAD</label>
                 <input type="number" class="form-control" id="price" name="price" step="0.01" required>
             </div>
-<!--            <div class="form-group">
+            <div class="form-group">
                 <label for="availability">Available For</label>
                 <select class="form-control" id="availability" name="availability" required>
                     <option value="consumers">Consumers</option>

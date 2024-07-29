@@ -34,7 +34,7 @@
                 <%= request.getAttribute("loginError") %>
             </div>
         <% } %>
-        <!<!-- Rustom: Change to my own file path! -->
+        
         <form action="/FWRP/LoginServlet" autocomplete="off" method="POST"onsubmit="return validateLoginForm()">
             <div class="form-group">
                 <label for="email">Email:</label>

@@ -1,7 +1,6 @@
 
 <%-- 
-
-    Author     : 
+    Author     : Mohammad Dellawari
 --%>
 <%@page import="java.util.*"%>
 <%@page import="Model.Subscription"%>
