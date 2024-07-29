@@ -9,11 +9,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Single database connection.
- * @author Tom - Rustom Trayvilla
- * @since 2024/03/24
- * @author Modified by Farock Yandom Youmbi Farock
+ * @author : Mohammad Dellawari
  */
+
 public class DBConnection {
 
     private static DBConnection instance;

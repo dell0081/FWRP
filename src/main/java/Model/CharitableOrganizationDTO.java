@@ -4,6 +4,11 @@
  */
 package Model;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
+
 public class CharitableOrganizationDTO extends CredentialsDTO {
     
     private String charitableOrgName;

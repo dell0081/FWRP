@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import Model.*;
 import DataAccessLayer.UserDAO;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
 
 public class RegistrationServlet extends HttpServlet {
 

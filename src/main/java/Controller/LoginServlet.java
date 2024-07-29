@@ -15,6 +15,9 @@ import Model.CredentialsDTO;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * @author : Mohammad Dellawari
+ */
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
@@ -68,15 +71,15 @@ System.out.println("Setting userId in session: " + user.getUserId());
             if ("retailer".equalsIgnoreCase(user.getUserType())) {
                 session = request.getSession();
                 session.setAttribute("user_id", user.getUserId());
-                response.sendRedirect("/OOPFinalProject_FWRP/InventoryManagementServlet"); // Redirect to the retailer's dashboard
+                response.sendRedirect("/FWRP/InventoryManagementServlet"); // Redirect to the retailer's dashboard
             } else if ("consumer".equalsIgnoreCase(user.getUserType())) {
                 session = request.getSession();
                 session.setAttribute("user_id", user.getUserId());  // Assuming 'getUserId()' correctly retrieves the user's ID
-                response.sendRedirect("/OOPFinalProject_FWRP/ConsumerItemsServlet");
+                response.sendRedirect("/FWRP/ConsumerItemsServlet");
             }else if ("charitable_org.".equalsIgnoreCase(user.getUserType())) {
                 session = request.getSession();
                 session.setAttribute("user_id", user.getUserId());  // Assuming 'getUserId()' correctly retrieves the user's ID
-                response.sendRedirect("/OOPFinalProject_FWRP/CharitableOrgItemsServlet");
+                response.sendRedirect("/FWRP/CharitableOrgItemsServlet");
             } else {
                 // Handle other user types or default action
                 response.sendRedirect("Views/index.jsp"); // Redirect to a default page or error page

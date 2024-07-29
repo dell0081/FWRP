@@ -5,9 +5,9 @@
 package Model;
 
 /**
- *
- * @author 
+ * @author : Mohammad Dellawari
  */
+
 public class Subscription {
     private String location;
     private String retailerName;

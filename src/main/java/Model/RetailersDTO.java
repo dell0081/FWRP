@@ -4,6 +4,11 @@
  */
 package Model;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
+
 public class RetailersDTO extends CredentialsDTO {
     
     private String retailerName;

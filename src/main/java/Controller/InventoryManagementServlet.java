@@ -24,6 +24,10 @@ import java.util.List;
 
 
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
 
 @WebServlet(name = "InventoryManagementServlet", urlPatterns = {"/InventoryManagementServlet"})
 public class InventoryManagementServlet extends HttpServlet {

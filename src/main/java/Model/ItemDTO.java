@@ -4,6 +4,11 @@
  */
 package Model;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
+
 public class ItemDTO {
     private int itemId;
     //private int inventoryId; //mm-added

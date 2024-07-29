@@ -4,6 +4,11 @@
  */
 package Model;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
+
 public abstract class CredentialsDTO {
     
     protected String userType;

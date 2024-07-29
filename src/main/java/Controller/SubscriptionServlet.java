@@ -17,9 +17,9 @@ import Model.*;
 import java.util.List;
 
 /**
- *
- * @author Home
+ * @author : Mohammad Dellawari
  */
+
 @WebServlet(name = "SubscriptionServlet", urlPatterns = {"/SubscriptionServlet"})
 public class SubscriptionServlet extends HttpServlet {
 
@@ -78,9 +78,9 @@ public class SubscriptionServlet extends HttpServlet {
             }
 
             if ("subscribe".equals(action)) {
-                response.sendRedirect("/OOPFinalProject_FWRP/ConsumerItemsServlet");
+                response.sendRedirect("/FWRP/ConsumerItemsServlet");
             } else if ("unsubscribe".equals(action)) {
-                response.sendRedirect("/OOPFinalProject_FWRP/SubscriptionServlet");
+                response.sendRedirect("/FWRP/SubscriptionServlet");
             }
 
         } else {

@@ -18,6 +18,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
 @WebServlet(name = "CharityItemsServlet", urlPatterns = {"/CharityItemsServlet"})
 public class CharityItemsServlet extends HttpServlet {
 

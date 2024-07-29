@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
- * @author Home
+ * @author : Mohammad Dellawari
  */
 @WebServlet(name = "NotificationServlet", urlPatterns = {"/NotificationServlet"})
 public class NotificationServlet extends HttpServlet {

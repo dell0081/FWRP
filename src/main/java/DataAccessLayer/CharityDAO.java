@@ -13,9 +13,10 @@ import java.util.List;
 
 /**
  * The CharityDAO class allows charity users to 
- * add item, select item and subscribe.
- * @author 
+ * add item, select item and subscribe
+ * @author : Mohammad Dellawari
  */
+
 public class CharityDAO extends UserDAO{
     private Connection connection;
     

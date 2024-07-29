@@ -12,6 +12,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author : Mohammad Dellawari
+ */
+
+
 public class ConsumerDAO extends UserDAO {
     
     private final Connection connection;

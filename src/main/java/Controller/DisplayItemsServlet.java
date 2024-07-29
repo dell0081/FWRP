@@ -17,10 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
+
 /**
- * Created April 3, 2024 3:51pm
- * @author Vaishali 
+ * @author : Mohammad Dellawari
  */
+
 public class DisplayItemsServlet extends HttpServlet {
     
     private final static Logger LOGGER = Logger.getLogger(DisplayItemsServlet.class.getName());

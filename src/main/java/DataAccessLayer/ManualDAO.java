@@ -10,11 +10,9 @@ import java.sql.SQLException;
 import java.sql.Connection;
 
 /**
- * This class is for adding the item to the 
- * database. This class is made so I don't have to
- * modify the retailer table.v
- * @author 
+ * @author : Mohammad Dellawari
  */
+
 public class ManualDAO {
     private Connection connection;
     

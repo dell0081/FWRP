@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author : Mohammad Dellawari
+ */
 
 @WebServlet(name = "RetailerDashboardServlet", urlPatterns = {"/RetailerDashboardServlet"})
 public class RetailerDashboardServlet extends HttpServlet {

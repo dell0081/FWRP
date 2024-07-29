@@ -15,10 +15,9 @@ import java.sql.DriverManager;
 
 import java.sql.ResultSet;
 /**
- * The RetailersDAO class allows retailer users to 
- * add item, select item, update item.
- * @author 
+ * @author : Mohammad Dellawari
  */
+
 public class RetailersDAO implements ItemDAO{
 
         private Connection connection;
@@ -105,13 +104,12 @@ public  int addItemGood(ItemDTO item, int retailerId, int forConsumer, int forCh
       }
     }
 
-    //------------------------added by Vaishali---------------------------------------
     @Override
 public List<ItemDTO> getAllAvailableItems() {
     List<ItemDTO> items = new ArrayList<>();
     String query =  "SELECT i.item_name, i.quantity, i.price, u.retailer_name, i.for_consumer, i.for_charity " +
                     "FROM inventory i " +
-                    "JOIN users u ON i.user_id = u.user_id"; // Adjust as needed
+                    "JOIN users u ON i.user_id = u.user_id"; 
 
     try (PreparedStatement statement = connection.prepareStatement(query)) {
         ResultSet resultSet = statement.executeQuery();
