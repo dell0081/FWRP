@@ -35,7 +35,7 @@
                 text-align: center;
             }
             .subscribed-button {
-                background-color: green; /* Or another color that stands out */
+                background-color: green; 
                 color: white;
             }
         </style>

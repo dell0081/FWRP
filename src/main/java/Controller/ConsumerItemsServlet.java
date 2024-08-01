@@ -18,8 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Home
+ * @author : Mohammad Dellawari
  */
 @WebServlet(name = "ConsumerItemsServlet", urlPatterns = {"/ConsumerItemsServlet"})
 public class ConsumerItemsServlet extends HttpServlet {
@@ -67,7 +66,3 @@ public class ConsumerItemsServlet extends HttpServlet {
     }
     
 }
-
-/**
- * @author : Mohammad Dellawari
- */

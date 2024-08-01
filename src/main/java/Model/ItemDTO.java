@@ -136,7 +136,6 @@ public class ItemDTO {
     }
     
    
-    //------------------------------------------
 
     /**
      * @return the RetailerId
@@ -154,3 +153,5 @@ public class ItemDTO {
 
    
 }
+
+
