@@ -86,7 +86,7 @@ public class UserDAOTest {
             stmt.setString(1, charity.getEmailAddress());
             try (ResultSet rs = stmt.executeQuery()) {
                 assertTrue(rs.next());
-                assertEquals("testcharity@example.com", rs.getString("email"));
+                assertEquals("testcharity@gmail.com", rs.getString("email"));
                 assertEquals("Charity Address", rs.getString("address"));
                 assertEquals("098-765-4321", rs.getString("phone_num"));
                 assertEquals("password", rs.getString("password"));
