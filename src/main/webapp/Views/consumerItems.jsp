@@ -1,7 +1,4 @@
-<%-- 
-    Author     : Mohammad Dellawari
---%>
-
+<%-- Author: Damien Smith --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.ItemDTO"%>
@@ -11,7 +8,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Items Available for Purchase</title>
-        <!-- Bootstrap CSS for styling -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         <style>
             .container {
@@ -42,21 +38,15 @@
     </head>
     <body>
         <div class="container text-center">
-
             <%
                 String purchaseSuccess = (String) request.getAttribute("purchaseSuccess");
                 if (purchaseSuccess != null && !purchaseSuccess.isEmpty()) {
             %>
             <div class="alert alert-success" role="alert">
-                <%= purchaseSuccess%>
+                <%= purchaseSuccess %>
             </div>
-            <%
-                }
-            %>
-
-
+            <% } %>
             <h1>Consumer - Food Waste Reduction Platform</h1>
-            <!-- Logout Link -->
             <div class="text-right mb-3">
                 <a href="/FWRP/LogoutServlet" class="btn btn-danger">Logout</a>
             </div>
@@ -67,13 +57,10 @@
                 if (errorMessage != null && !errorMessage.isEmpty()) {
             %>
             <div class="alert alert-danger" role="alert">
-                <%= errorMessage%>
+                <%= errorMessage %>
             </div>
-            <%
-                }
-            %>
+            <% } %>
         </div>
-
         <div class="container mt-3">
             <form action="/FWRP/AddToCartServlet" method="post" onsubmit="return validateForm()">
                 <table class="table table-bordered">
@@ -88,29 +75,27 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                       
-                   <a href="/FWRP/SubscriptionServlet">Subscription</a>
+                        <a href="/FWRP/SubscriptionServlet">Subscription</a>
                         <%
                             List<ItemDTO> items = (List<ItemDTO>) request.getAttribute("itemsForConsumer");
-                            ConsumerDAO dao = new ConsumerDAO();  // Initialize once outside the loop to avoid repeated instantiations
+                            ConsumerDAO dao = new ConsumerDAO();
                             if (items != null && !items.isEmpty()) {
                                 for (ItemDTO item : items) {
-                                    boolean isSubscribed = dao.isSubscribed((Integer) session.getAttribute("user_id"), item.getRetailerId());
+                                    boolean isSubscribed = dao.isSubscribed((Integer), session.getAttribute("user_id"), item.getRetailerId());
                         %>
                         <tr>
-                            <td><%= item.getItemName()%></td>
-                            <td><%= item.getItemQuantity()%></td>
-                            <td>$<%= item.getPrice()%></td>
+                            <td><%= item.getItemName() %></td>
+                            <td><%= item.getItemQuantity() %></td>
+                            <td>$<%= item.getPrice() %></td>
                             <td>
-                                <input type="checkbox" name="inventory_id" value="<%= item.getItemId()%>">
+                                <input type="checkbox" name="inventory_id" value="<%= item.getItemId() %>">
                             </td>
-                            <td><%= item.getRetailerName()%></td>
+                            <td><%= item.getRetailerName() %></td>
                             <td>
-                                <% if (!isSubscribed) {%>
+                                <% if (!isSubscribed) { %>
                                 <form method="post" action="/FWRP/SubscriptionServlet">
-                                    <input type="hidden" name="user_id" value="<%= session.getAttribute("user_id") != null ? session.getAttribute("user_id").toString() : ""%>">
-                                    <input type="hidden" name="retailer_id" value="<%= item.getRetailerId()%>">
+                                    <input type="hidden" name="user_id" value="<%= session.getAttribute("user_id") != null ? session.getAttribute("user_id").toString() : "" %>">
+                                    <input type="hidden" name="retailer_id" value="<%= item.getRetailerId() %>">
                                     <input type="hidden" name="action" value="subscribe">
                                     <button type="submit" class="btn btn-warning btn-spacing">Subscribe</button>
                                 </form>
@@ -126,10 +111,7 @@
                         <tr>
                             <td colspan="6" class="text-center">No items available for purchase.</td>
                         </tr>
-                        <%
-                            }
-                        %>
-
+                        <% } %>
                     </tbody>
                 </table>
                 <div class="text-center">
@@ -141,7 +123,7 @@
             function subscribe(button) {
                 button.classList.add('subscribed-button');
                 button.innerHTML = 'Subscribed';
-                button.disabled = true; // Optionally disable the button after clicking
+                button.disabled = true;
             }
         </script>
         <script>
@@ -154,7 +136,6 @@
                 return true;
             }
         </script>
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

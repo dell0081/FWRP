@@ -1,3 +1,4 @@
+<%-- Author: Damien Smith --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.ItemDTO"%>
@@ -7,7 +8,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Items Available for Charity</title>
-        <!-- Bootstrap CSS for styling -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
         <style>
             .container {
@@ -39,13 +39,10 @@
                 if (purchaseSuccess != null && !purchaseSuccess.isEmpty()) {
             %>
             <div class="alert alert-success" role="alert">
-                <%= purchaseSuccess%>
+                <%= purchaseSuccess %>
             </div>
-            <%
-                }
-            %>
+            <% } %>
             <h1>Charity - Food Waste Reduction Platform</h1>
-            <!-- Logout Link -->
             <div class="text-right mb-3">
                 <a href="/FWRP/LogoutServlet" class="btn btn-danger">Logout</a>
             </div>
@@ -56,11 +53,9 @@
                 if (errorMessage != null && !errorMessage.isEmpty()) {
             %>
             <div class="alert alert-danger" role="alert">
-                <%= errorMessage%>
+                <%= errorMessage %>
             </div>
-            <%
-                }
-            %>
+            <% } %>
         </div>
         <div class="container mt-3">
             <form action="/FWRP/ClaimItemsServlet" method="post" onsubmit="return validateForm()">
@@ -81,13 +76,13 @@
                                 for (ItemDTO item : items) {
                         %>
                         <tr>
-                            <td><%= item.getItemName()%></td>
-                            <td><%= item.getItemQuantity()%></td>
-                            <td>$<%= item.getPrice()%></td>
+                            <td><%= item.getItemName() %></td>
+                            <td><%= item.getItemQuantity() %></td>
+                            <td>$<%= item.getPrice() %></td>
                             <td>
-                                <input type="checkbox" name="inventory_id" value="<%= item.getItemId()%>">
+                                <input type="checkbox" name="inventory_id" value="<%= item.getItemId() %>">
                             </td>
-                            <td><%= item.getRetailerName()%></td>
+                            <td><%= item.getRetailerName() %></td>
                         </tr>
                         <%
                                 }
@@ -96,9 +91,7 @@
                         <tr>
                             <td colspan="5" class="text-center">No items available for charity.</td>
                         </tr>
-                        <%
-                            }
-                        %>
+                        <% } %>
                     </tbody>
                 </table>
                 <div class="text-center">
